@@ -1,5 +1,13 @@
 <h1 align="center">Zee Mirror</h1>
 
+<details><summary><b>Deploy To Koyeb</b></summary>
+<br>
+<b>The fastest way to deploy the application is to click the Deploy to Koyeb button below.</b>
+<br>
+<br>
+
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/rarrarsk/King-Kong&branch=main&name=King-Kong)
+</details>
 
 This is a Telegram Mirror/Leech Bot written in Python for mirroring files on the Internet to your Cloud Drive, based on [Mirror-Leech-Telegram-Bot](https://github.com/anasty17/mirror-leech-telegram-bot), has undergone
 substantial modifications and is designed for efficiently mirroring or leeching files from the Internet to various
