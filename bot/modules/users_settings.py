@@ -404,7 +404,7 @@ async def update_user_settings(query):
     media = (
         f"Thumbnails/{user_id}.jpg"
         if os_path.exists(f"Thumbnails/{user_id}.jpg")
-        else f"{def_media(JAVA.encode()).decode()}"
+        else "https://envs.sh/IL4.jpg"
     )
     await query.message.edit_media(
         media=InputMediaPhoto(
@@ -415,6 +415,7 @@ async def update_user_settings(query):
     )
 
 
+@new_task
 async def user_settings(client, message):
     await client.stop_listening(
         chat_id=message.chat.id,
@@ -428,7 +429,7 @@ async def user_settings(client, message):
     media = (
         f"Thumbnails/{user_id}.jpg"
         if os_path.exists(f"Thumbnails/{user_id}.jpg")
-        else f"{def_media(JAVA.encode()).decode()}"
+        else "https://envs.sh/IL4.jpg"
     )
     usetMsg = await message.reply_photo(
         media,
