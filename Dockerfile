@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
 COPY requirements.txt .
-RUN pip3.12 install --break-system-packages --no-cache-dir -r requirements.txt
+RUN pip3.12 install --no-cache-dir -U pip && pip3.12 install --no-cache-dir -r requirements.txt
 COPY . .
 
 RUN rm -rf py_generators config_sample.env Dockerfile LICENSE README.md requirements.txt
