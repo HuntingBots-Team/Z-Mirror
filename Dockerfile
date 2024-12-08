@@ -1,13 +1,10 @@
-FROM python:3.10.4-slim
+FROM dawn001/z_mirror:main
 
-WORKDIR /bot/
-
-RUN apt-get update && apt-get upgrade -y
-RUN python3 -m pip install -U pip
-RUN pip3 install --upgrade pip setuptools
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
 
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -U -r requirements.txt
+RUN pip3 install --break-system-packages --no-cache-dir -r requirements.txt
 
 COPY . .
 
