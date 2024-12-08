@@ -415,7 +415,6 @@ async def update_user_settings(query):
     )
 
 
-@new_task
 async def user_settings(client, message):
     await client.stop_listening(
         chat_id=message.chat.id,
