@@ -1288,7 +1288,7 @@ bot = tgClient(
     TELEGRAM_API,
     TELEGRAM_HASH,
     bot_token=BOT_TOKEN,
-    8yyu Session",
+    app_version="@TGHThingLeech_bot Session",
     device_model="@TGHThingLeech_bot Bot",
     system_version="@TGHThingLeech_bot Server",
 ).start()
