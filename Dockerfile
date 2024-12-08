@@ -11,8 +11,6 @@ RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 COPY . .
 
-COPY config.evn .
-
 RUN rm -rf py_generators config_sample.env Dockerfile LICENSE README.md requirements.txt
 
 CMD ["bash", "start.sh"]
