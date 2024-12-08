@@ -1,11 +1,18 @@
-FROM dawn001/z_mirror:main
+FROM python:3.10.4-slim
 
-WORKDIR /usr/src/app
-RUN chmod 777 /usr/src/app
+WORKDIR /bot/
+
+RUN apt-get update && apt-get upgrade -y
+RUN python3 -m pip install -U pip
+RUN pip3 install --upgrade pip setuptools
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 COPY . .
+
+COPY config.evn .
+
+RUN rm -rf py_generators config_sample.env Dockerfile LICENSE README.md requirements.txt
 
 CMD ["bash", "start.sh"]
